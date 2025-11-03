@@ -99,6 +99,8 @@ document.head.appendChild(globalStyle);
 
 // --- Função para mostrar o código ---
 function showCode(index) {
+  openCodePanel();
+
   currentButton = index;
   const btn = buttonCollection[index];
 
@@ -153,4 +155,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Exibe o primeiro botão ao carregar
   showCode(0);
+});
+
+// Abre o painel de código
+function openCodePanel() {
+  const codePanel = document.querySelector(".btn-code");
+  const btnPanel = document.querySelector(".btn-container");
+  if (!codePanel) return;
+  codePanel.classList.add("open");
+  btnPanel.classList.add("open");
+  // altura desejada quando aberto (ajuste se quiser)
+  codePanel.style.height = "70vh";
+  // garante overflow para rolagem interna
+  codePanel.style.overflowY = "auto";
+}
+
+// Fecha o painel de código
+function closeCodePanel() {
+  const codePanel = document.querySelector(".btn-code");
+  const btnPanel = document.querySelector(".btn-container");
+  if (!codePanel) return;
+  codePanel.classList.remove("open");
+  btnPanel.classList.remove("open");
+  codePanel.style.height = "60px";
+  // opcional: remover overflow para manter comportamento inicial
+  codePanel.style.overflowY = "hidden";
+}
+
+/* Fecha o painel ao clicar fora (mobile/tablet).
+   Usamos composedPath() para cobrir cliques em SVGs/children. */
+document.addEventListener("click", (e) => {
+  const path = e.composedPath ? e.composedPath() : (e.path || []);
+  const clickedInsideCode = path.some(node => node && node.classList && node.classList.contains && node.classList.contains("btn-code"));
+  const clickedInsideButtons = path.some(node => node && node.classList && node.classList.contains && node.classList.contains("btn-coleection"));
+  // se painel aberto e clique foi fora das duas áreas, fecha
+  const codePanel = document.querySelector(".btn-code");
+  if (codePanel && codePanel.classList.contains("open") && !clickedInsideCode && !clickedInsideButtons) {
+    closeCodePanel();
+  }
 });

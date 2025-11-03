@@ -65,6 +65,10 @@ main {
         letter-spacing: 1px;
         text-transform: uppercase;
         color: #5e17eb;
+
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+        }
     }
 
     p {
@@ -81,7 +85,10 @@ main {
         height: calc(100% - (10px + 20px + 70px));
         display: flex;
         gap: 10px;
-        /* border: 1px solid red; */
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+        }
 
         .title-top {
             text-align: center;
@@ -102,6 +109,15 @@ main {
             overflow: auto;
             overflow-y: auto;
             overflow-x: auto;
+
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+                height: 100%;
+
+                &.open {
+                    height: calc(100% - 30vh);
+                }
+            }
 
             &::-webkit-scrollbar {
                 width: 15px;
@@ -142,6 +158,10 @@ main {
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 10px;
+
+                @media screen and (max-width: 1024px) {
+                    justify-content: center;
+                }
             }
         }
 
@@ -155,6 +175,19 @@ main {
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             overflow-y: auto;
+            transition: height 0.4s ease;
+
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+                height: 60px;
+                align-items: center;
+                overflow-y: hidden;
+
+                &.open {
+                    height: 70vh;
+                    overflow-y: auto;
+                }
+            }
 
             &::-webkit-scrollbar {
                 width: 15px;
@@ -198,6 +231,10 @@ main {
                 border: 1px solid #5e17eb;
                 border-radius: 10px;
 
+                @media screen and (min-width: 768px) and (max-width: 1024px) {
+                    width: 60%;
+                }
+
                 .btn-preview {
                     width: 100%;
                     height: 150px;
@@ -208,6 +245,10 @@ main {
                     border-radius: 10px;
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                     transition: all 0.3s ease;
+
+                    @media screen and (max-width: 767px) {
+                        height: 100px;
+                    }
 
                     &:hover {
                         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -234,7 +275,7 @@ main {
 
             .code-box {
                 width: 100%;
-                margin-top: 10px;
+                margin-top: 10px; 
                 padding: 10px;
                 display: flex;
                 justify-content: space-between;
@@ -260,6 +301,12 @@ main {
                         overflow-x: auto;
                         color: aqua;
                         background-color: #000 !important;
+
+                        @media screen and (max-width: 1024px) {
+                            overflow-x: auto;
+                            -webkit-overflow-scrolling: touch;
+                            scrollbar-width: none;
+                        }
                     }
                 }
 
