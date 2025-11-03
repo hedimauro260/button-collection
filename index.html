@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Prism.js para syntax highlight -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/images/logo-3.png" type="image/x-icon">
+    <title>Button Collection | Compile Code</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="./assets/images/logo-3.png" alt="logo">
+                <span>Compile Code</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Button Collection</h1>
+        <p>Collection of various buttons using html, css and javascript.</p>
+        <!-- section where the buttons are -->
+        <section class="main-section">
+            <!-- collection of buttons -->
+            <div class="btn-container">
+                <h2 class="title-top">Button Collection</h2>
+                <div class="btn-coleection">
+                    <button class="btn-01" id="btn-01" onclick="showCode(0)">Button 01</button>
+                    <button class="btn-02" id="btn-02" onclick="showCode(1)">Button 02</button>
+                    <button class="btn-03" id="btn-03" onclick="showCode(2)">Button 03</button>
+                    <button class="btn-04" id="btn-04" onclick="showCode(3)">Button 04</button>
+                    <button class="btn-05" id="btn-05" onclick="showCode(4)">Button 05</button>
+                </div>
+            </div>
+            <!-- section where the code is -->
+            <div class="btn-code">
+                <h2 class="title-top">Button Code</h2>
+                <div class="preview-container">
+                    <div class="btn-preview" id="button-preview"></div>
+                </div>
+                <!-- code HTML -->
+                <div class="code-container html-container">
+                    <div class="code-title html-title">
+                        <span>HTML: </span>Copy this code into your HTML page.
+                    </div>
+                </div>
+                <div class="code-box html-box">
+                    <div class="code-block html-code">
+                        <pre><code id="block-html" class="block-html language-html"></code></pre>
+                    </div>
+                    <button class="btn-copy">
+                        <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 32 32"
+                            xml:space="preserve">
+                            <style type="text/css">
+                                .stone_een {
+                                    fill: #0B1719;
+                                }
+                            </style>
+                            <path class="stone_een" d="M10,6c0,0.552,0.448,1,1,1h10c0.552,0,1-0.448,1-1V3c0-0.552-0.448-1-1-1h-2.184
+                                C18.403,0.837,17.304,0,16,0s-2.403,0.837-2.816,2H11c-0.552,0-1,0.448-1,1V6z M28,6v23c0,1.657-1.343,3-3,3H7c-1.657,0-3-1.343-3-3
+                                V6c0-1.657,1.343-3,3-3h2v2H7C6.448,5,6,5.448,6,6v23c0,0.552,0.448,1,1,1h18c0.552,0,1-0.448,1-1V6c0-0.552-0.448-1-1-1h-2V3h2
+                                C26.657,3,28,4.343,28,6z M23,6c0,1.103-0.897,2-2,2H11C9.897,8,9,7.103,9,6H7v23h18V6H23z M19.5,19h-7c-0.276,0-0.5-0.224-0.5-0.5
+                                c0-0.276,0.224-0.5,0.5-0.5h7c0.276,0,0.5,0.224,0.5,0.5C20,18.776,19.776,19,19.5,19z M19.5,17h-7c-0.276,0-0.5-0.224-0.5-0.5
+                                c0-0.276,0.224-0.5,0.5-0.5h7c0.276,0,0.5,0.224,0.5,0.5C20,16.776,19.776,17,19.5,17z M19.5,15h-7c-0.276,0-0.5-0.224-0.5-0.5
+                                c0-0.276,0.224-0.5,0.5-0.5h7c0.276,0,0.5,0.224,0.5,0.5C20,14.776,19.776,15,19.5,15z" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- code CSS -->
+                <div class="code-container css-container">
+                    <div class="code-title css-title">
+                        <span>CSS: </span>Copy this code into your CSS page.
+                    </div>
+                </div>
+                <div class="code-box css-box">
+                    <div class="code-block css-code">
+                        <pre><code id="block-css" class="block-css language-css"></code></pre>
+                    </div>
+                    <button class="btn-copy">
+                        <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 32 32"
+                            xml:space="preserve">
+                            <style type="text/css">
+                                .stone_een {
+                                    fill: #0B1719;
+                                }
+                            </style>
+                            <path class="stone_een" d="M10,6c0,0.552,0.448,1,1,1h10c0.552,0,1-0.448,1-1V3c0-0.552-0.448-1-1-1h-2.184
+                                C18.403,0.837,17.304,0,16,0s-2.403,0.837-2.816,2H11c-0.552,0-1,0.448-1,1V6z M28,6v23c0,1.657-1.343,3-3,3H7c-1.657,0-3-1.343-3-3
+                                V6c0-1.657,1.343-3,3-3h2v2H7C6.448,5,6,5.448,6,6v23c0,0.552,0.448,1,1,1h18c0.552,0,1-0.448,1-1V6c0-0.552-0.448-1-1-1h-2V3h2
+                                C26.657,3,28,4.343,28,6z M23,6c0,1.103-0.897,2-2,2H11C9.897,8,9,7.103,9,6H7v23h18V6H23z M19.5,19h-7c-0.276,0-0.5-0.224-0.5-0.5
+                                c0-0.276,0.224-0.5,0.5-0.5h7c0.276,0,0.5,0.224,0.5,0.5C20,18.776,19.776,19,19.5,19z M19.5,17h-7c-0.276,0-0.5-0.224-0.5-0.5
+                                c0-0.276,0.224-0.5,0.5-0.5h7c0.276,0,0.5,0.224,0.5,0.5C20,16.776,19.776,17,19.5,17z M19.5,15h-7c-0.276,0-0.5-0.224-0.5-0.5
+                                c0-0.276,0.224-0.5,0.5-0.5h7c0.276,0,0.5,0.224,0.5,0.5C20,14.776,19.776,15,19.5,15z" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- code JS -->
+                <div class="code-container js-container">
+                    <div class="code-title js-title">
+                        <span>javascript: </span>Copy this code into your JS page.
+                    </div>
+                </div>
+                <div class="code-box js-box">
+                    <div class="code-block js-code">
+                        <pre><code id="block-js" class="block-js language-js"></code></pre>
+                    </div>
+                    <button class="btn-copy">
+                        <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 32 32"
+                            xml:space="preserve">
+                            <style type="text/css">
+                                .stone_een {
+                                    fill: #0B1719;
+                                }
+                            </style>
+                            <path class="stone_een" d="M10,6c0,0.552,0.448,1,1,1h10c0.552,0,1-0.448,1-1V3c0-0.552-0.448-1-1-1h-2.184
+                                C18.403,0.837,17.304,0,16,0s-2.403,0.837-2.816,2H11c-0.552,0-1,0.448-1,1V6z M28,6v23c0,1.657-1.343,3-3,3H7c-1.657,0-3-1.343-3-3
+                                V6c0-1.657,1.343-3,3-3h2v2H7C6.448,5,6,5.448,6,6v23c0,0.552,0.448,1,1,1h18c0.552,0,1-0.448,1-1V6c0-0.552-0.448-1-1-1h-2V3h2
+                                C26.657,3,28,4.343,28,6z M23,6c0,1.103-0.897,2-2,2H11C9.897,8,9,7.103,9,6H7v23h18V6H23z M19.5,19h-7c-0.276,0-0.5-0.224-0.5-0.5
+                                c0-0.276,0.224-0.5,0.5-0.5h7c0.276,0,0.5,0.224,0.5,0.5C20,18.776,19.776,19,19.5,19z M19.5,17h-7c-0.276,0-0.5-0.224-0.5-0.5
+                                c0-0.276,0.224-0.5,0.5-0.5h7c0.276,0,0.5,0.224,0.5,0.5C20,16.776,19.776,17,19.5,17z M19.5,15h-7c-0.276,0-0.5-0.224-0.5-0.5
+                                c0-0.276,0.224-0.5,0.5-0.5h7c0.276,0,0.5,0.224,0.5,0.5C20,14.776,19.776,15,19.5,15z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+</body>
+</html>
