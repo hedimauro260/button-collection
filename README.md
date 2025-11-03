@@ -15,7 +15,6 @@ Cada trecho pode ser **copiado com um clique**, facilitando o uso em outros proj
 
 ---
 
-````markdown
 <!-- HEADER -->
 <div align="center">
 
@@ -63,7 +62,8 @@ O projeto foi desenvolvido com foco em **aprendizado, inspiração e reutilizaç
 ## 📱 **Demonstração**
 
 <p align="center">
-  <img src="./assets/screenshot.png" width="700" alt="Preview do Projeto">
+  <img src="./assets/images/screenshot-01.webp" width="700" alt="Preview do Projeto">
+  <img src="./assets/images/screenshot-02.webp" width="700" alt="Preview Mobile do Projeto">
 </p>
 
 > 💡 O layout é **totalmente responsivo**, adaptando-se a telas pequenas e incluindo um **painel de código expansível/recolhível** com animação suave.
@@ -104,7 +104,7 @@ cd button-collection
 
 # 3️⃣ Abra no navegador
 start index.html
-````
+```
 
 💡 *Não requer dependências externas — funciona direto no navegador.*
 
@@ -112,7 +112,7 @@ start index.html
 
 ## 🧩 Estrutura do Projeto
 
-```
+```bash
 📁 button-collection/
 │
 ├── index.html        # Estrutura principal
@@ -193,7 +193,6 @@ Isso facilita adicionar novos botões à coleção.
 
 ---
 
-````markdown
 ## 👨‍💻 **Autor**
 
 <div align="center">
@@ -220,14 +219,5 @@ Este projeto está sob a licença **MIT** — veja o arquivo [LICENSE](LICENSE) 
 Feito com 💛 por [Hedi Mauro](https://github.com/hedimauro260)
 
 </div>
-````
 
 ---
-
-## 📸 Preview
-
-![Tela principal](./assets/images/preview-01.webp)
-![Tela Tablet/Mobile](./assets/images/preview-02.webp)
-
----
-
