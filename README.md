@@ -72,12 +72,32 @@ O projeto foi desenvolvido com foco em **aprendizado, inspiração e reutilizaç
 
 ## ⚙️ **Funcionalidades**
 
-✅ Exibição de botões com diferentes estilos  
+✅ Categorias expansíveis (acordeão animado com easing e bounce)
+✅ Exibição de botões com diferentes estilos 
+✅ Botões interativos organizados em estilos temáticos 
+✅ Mostra o código HTML, CSS e JS de cada botão
 ✅ Painel de código dinâmico com realce de sintaxe (Prism.js)  
-✅ Botão “Copiar código” com feedback visual  
+✅ Botão **“Copiar código”** com feedback visual  
 ✅ Layout responsivo com **media queries**  
 ✅ Interação fluida com animações CSS  
-✅ Fechamento automático ao clicar fora no mobile  
+✅ Fechamento automático ao clicar fora no mobile
+✅ Interface simples e responsiva  
+
+---
+
+## 🧩 **Categorias Disponíveis**
+
+| Tipo              | Exemplos                         |
+| ----------------- | -------------------------------- |
+| 🎨 **Classic**    | Flat, Outline, Solid, Ghost      |
+| 💎 **Modern**     | Neon, Glass, Gradient, Glow      |
+| 🧼 **Minimalism** | Soft Shadow, Frosted, Pastel     |
+| ⚙️ **System**     | Material, Cupertino, Retro Pixel |
+| 🌀 **Creativity** | Cyberpunk, Liquid, Magnetic      |
+| ⚡ **Animated**    | Ripple, Pulse, Flip, Slide       |
+| 🕶️ **Thematic**  | Dark Mode, Retro 90s, Paper      |
+
+💡 O menu "All Categories" agora abre e fecha com transição suave e sombra dinâmica, oferecendo uma experiência fluida.
 
 ---
 
@@ -140,16 +160,6 @@ start index.html
 
 ---
 
-## ⚙️ Funcionalidades
-
-✅ Exibição visual de diferentes botões
-✅ Mostra o código HTML, CSS e JS de cada botão
-✅ Botão de **"Copiar código"** com feedback visual
-✅ Realce automático de sintaxe
-✅ Interface simples e responsiva
-
----
-
 ## 🧠 **Conceitos Envolvidos**
 
 🔸 Manipulação de DOM
@@ -184,8 +194,7 @@ Isso facilita adicionar novos botões à coleção.
 
 | Recurso                                     | Status                |
 | ------------------------------------------- | --------------------- |
-| 🧱 Agrupar em categorias                    | 🟡 Em desenvolvimento |
-| 🌗 Arquivo JSON com os botões               | ⚪ Planejado          |
+| 🌗 Arquivo JSON com os botões               | 🟡 Em desenvolvimento |
 | 🌗 Modo claro/escuro                        | ⚪ Planejado          |
 | 🎨 Personalizador de cores ao vivo          | ⚪ Planejado           |
 | 💾 Download automático do código            | ⚪ Planejado           |

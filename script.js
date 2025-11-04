@@ -144,7 +144,7 @@ function copyCode(event) {
 // --- Inicialização automática ---
 document.addEventListener("DOMContentLoaded", () => {
   // Adiciona listener a todos os botões da coleção
-  document.querySelectorAll(".btn-coleection button").forEach((btn, i) => {
+  document.querySelectorAll(".btn-collection button").forEach((btn, i) => {
     btn.addEventListener("click", () => showCode(i));
   });
 
@@ -157,8 +157,13 @@ document.addEventListener("DOMContentLoaded", () => {
   showCode(0);
 });
 
+// Detecta se a tela é mobile ou tablet
+const isMobileOrTablet = window.matchMedia("(max-width: 1024px)");
+
 // Abre o painel de código
 function openCodePanel() {
+  if (!isMobileOrTablet.matches) return; // evita execução em telas grandes
+
   const codePanel = document.querySelector(".btn-code");
   const btnPanel = document.querySelector(".btn-container");
   if (!codePanel) return;
@@ -172,6 +177,8 @@ function openCodePanel() {
 
 // Fecha o painel de código
 function closeCodePanel() {
+  if (!isMobileOrTablet.matches) return; // evita execução em telas grandes
+
   const codePanel = document.querySelector(".btn-code");
   const btnPanel = document.querySelector(".btn-container");
   if (!codePanel) return;
@@ -182,15 +189,40 @@ function closeCodePanel() {
   codePanel.style.overflowY = "hidden";
 }
 
-/* Fecha o painel ao clicar fora (mobile/tablet).
-   Usamos composedPath() para cobrir cliques em SVGs/children. */
+// Fecha o painel ao clicar fora (mobile/tablet). Usamos composedPath() para cobrir cliques em SVGs/children.
 document.addEventListener("click", (e) => {
+  if (!isMobileOrTablet.matches) return; // não executa em desktop
+  
   const path = e.composedPath ? e.composedPath() : (e.path || []);
   const clickedInsideCode = path.some(node => node && node.classList && node.classList.contains && node.classList.contains("btn-code"));
-  const clickedInsideButtons = path.some(node => node && node.classList && node.classList.contains && node.classList.contains("btn-coleection"));
+  const clickedInsideButtons = path.some(node => node && node.classList && node.classList.contains && node.classList.contains("btn-collection"));
   // se painel aberto e clique foi fora das duas áreas, fecha
   const codePanel = document.querySelector(".btn-code");
   if (codePanel && codePanel.classList.contains("open") && !clickedInsideCode && !clickedInsideButtons) {
     closeCodePanel();
+  }
+});
+
+// Adiciona listener para abrir e fechar o painel com todas as categorias
+const btnAllCategories = document.querySelector(".btnAllCategories");
+
+btnAllCategories.addEventListener("click", () => {
+  const allCategories = document.querySelector(".allCategories");
+
+  if (allCategories.classList.contains("open")) {
+    // anima para fechar
+    allCategories.style.height = allCategories.scrollHeight + "px"; // força o height para que o scroll seja animado
+    requestAnimationFrame(() => {
+      allCategories.style.height = "0px";
+    });
+    allCategories.classList.remove("open");
+  } else {
+    // anima para abrir
+    allCategories.style.height = allCategories.scrollHeight + "px"; // força o height para que o scroll seja animado
+    allCategories.classList.add("open");
+    allCategories.addEventListener("transitionend", function handler() {
+      allCategories.style.height = "auto"; // libera altura após animação
+      allCategories.removeEventListener("transitionend", handler);
+    });
   }
 });

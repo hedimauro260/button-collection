@@ -152,17 +152,220 @@ main {
                 background-color: #5e17eb;
             }
 
-            .btn-coleection {
+            .button-gallery {
                 width: 100%;
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-                gap: 10px;
+                margin-bottom: 20px;
+                padding: 10px;
+                border: 1px solid #5e17eb;
+                border-radius: 10px;
 
-                @media screen and (max-width: 1024px) {
-                    justify-content: center;
+                h3 {
+                    font-size: 14px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    color: #5e17eb;
+                }
+
+                .galery-top {
+                    width: 100%;
+                    margin-top: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+
+                    .grid {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+
+                        .card {
+                            width: 100%;
+                            max-width: 220px;
+                            background-color: #000;
+                            border: 1px solid #e7e7e7;
+                            border-radius: 5px;
+                            padding: 10px 5px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 5px;
+                            cursor: pointer;
+                            transition: box-shadow 0.3s ease;
+
+                            h3 {
+                                font-size: 10px;
+                                font-weight: 700;
+                                letter-spacing: 1px;
+                                color: #f2f2f2;
+                            }
+
+                            .btn {
+                                width: 65%;
+                                height: 25px;
+                                font-size: 10px;
+                                letter-spacing: 1px;
+                                border: none;
+                                border-radius: 5px;
+                                transition: all 0.3s ease;
+
+                                /* Estilos especificos para cada botão */
+                                &.neon {
+                                    background: transparent;
+                                    border: 2px solid #00ffff;
+                                    color: #00ffff;
+                                    box-shadow: 0 0 8px #00ffff, inset 0 0 8px #00ffff;
+
+                                    &:hover {
+                                        box-shadow: 0 0 16px #00ffff, inset 0 0 16px #00ffff;
+                                    }
+                                }
+
+                                &.glass {
+                                    background: rgba(255, 255, 255, 0.1);
+                                    color: #fff;
+                                    border: 1px solid rgba(255, 255, 255, 0.3);
+
+                                    &:hover {
+                                        background: rgba(255, 255, 255, 0.2);
+                                    }
+                                }
+
+                                &.flat {
+                                    background: #0078ff;
+                                    color: #fff;
+
+                                    &:hover {
+                                        background: #005cc5;
+                                    }
+                                }
+
+                                &.gradient {
+                                    background: linear-gradient(45deg, #ff0057, #ffcc00);
+                                    color: #fff;
+
+                                    &:hover {
+                                        filter: brightness(1.2);
+                                    }
+                                }
+
+                                &.outline {
+                                    background: transparent;
+                                    color: #f3f3f3;
+                                    border: 2px solid #f3f3f3;
+
+                                    &:hover {
+                                        background: #f3f3f3;
+                                        color: #111;
+                                    }
+                                }
+
+                                &.press3d {
+                                    background: #29b6f6;
+                                    box-shadow: 0 4px #0288d1;
+                                    color: #fff;
+                                    transition: all 0.15s ease-in;
+
+                                    &:hover {
+                                        box-shadow: 0 2px #0288d1;
+                                        transform: translateY(2px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .btnAllCategories {
+                        margin-bottom: 5px;
+                        background: transparent;
+                        border: none;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        color: #333;
+                        cursor: pointer;
+
+                        &:hover {
+                            font-weight: 700;
+                            color: #5e17eb;
+                        }
+                    }
+                }
+
+                .allCategories {
+                    width: 100%;
+                    height: 0px;
+                    margin-top: 10px;
+                    border-top: 1px solid #ba9afc;
+                    overflow: hidden;
+                    transition: height 0.4s ease-in;
+
+                    .grid {
+                        width: 100%;
+                        padding-top: 10px;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+
+                        .card {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            h3 {
+                                margin-bottom: 10px;
+                                padding-bottom: 5px;
+                                font-size: 14px;
+                                font-weight: 400;
+                                letter-spacing: 1px;
+                                border-bottom: 1px solid #ba9afc;
+                            }
+
+                            ul {
+                                list-style: none;
+
+                                li {
+                                    text-align: center;
+                                    margin-bottom: 5px;
+                                    font-size: 12px;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        font-weight: 700;
+                                        color: #5e17eb;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
+
+            .buttons-container {
+                width: 100%;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h3 {
+                    font-size: 14px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    color: #5e17eb;
+                }
+
+                .btn-collection {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+
+                    @media screen and (max-width: 1024px) {
+                        justify-content: center;
+                    }
+                }
+            }
+            
         }
 
         .btn-code {
@@ -241,7 +444,7 @@ main {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #fff;
+                    background-color: #000;
                     border-radius: 10px;
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                     transition: all 0.3s ease;
