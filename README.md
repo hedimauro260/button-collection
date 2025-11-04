@@ -2,7 +2,7 @@
 
 ## 📸 Preview
 
-![Tela principal](./assets/images/screenshot-01.webp)
+![Tela principal](./assets/images/screenshot-03.webp)
 
 ---
 
@@ -62,8 +62,8 @@ O projeto foi desenvolvido com foco em **aprendizado, inspiração e reutilizaç
 ## 📱 **Demonstração**
 
 <p align="center">
-  <img src="./assets/images/screenshot-01.webp" width="700" alt="Preview do Projeto">
-  <img src="./assets/images/screenshot-02.webp" width="700" alt="Preview Mobile do Projeto">
+  <img src="./assets/images/screenshot-03.webp" width="700" alt="Preview do Projeto">
+  <img src="./assets/images/screenshot-04.webp" width="700" alt="Preview Mobile do Projeto">
 </p>
 
 > 💡 O layout é **totalmente responsivo**, adaptando-se a telas pequenas e incluindo um **painel de código expansível/recolhível** com animação suave.
@@ -137,12 +137,22 @@ start index.html
 │
 ├── index.html        # Estrutura principal
 ├── style.css         # Estilos e media queries
-├── script.js         # Interações e painel dinâmico
+├── main.js           # Interações e painel dinâmico
 │
 ├── assets/
-│   ├── screenshot-01.webp
-│   ├── screenshot-02.webp
-│   └── logo-3.png
+│   ├── images/      # Coleção de imagens
+│   │   ├── logo-03.png
+│   │   ├── screenshot-02.webp
+│   │   └── screenshot-03.webp
+│   │
+│   └── buttons/      # Coleção de botões
+│       ├── animated/
+│       ├── classic/
+│       ├── criativity/
+│       ├── minimalism/
+│       ├── modern/
+│       ├── system/
+│       └── thematic/
 │   
 │
 └── README.md
@@ -164,6 +174,7 @@ start index.html
 
 🔸 Manipulação de DOM
 🔸 Eventos (`click`, `DOMContentLoaded`)
+🔸 Estrutura modular JS
 🔸 Template strings e arrays de objetos
 🔸 Responsividade com media queries
 🔸 Transições CSS e controle de altura via JS
@@ -194,7 +205,6 @@ Isso facilita adicionar novos botões à coleção.
 
 | Recurso                                     | Status                |
 | ------------------------------------------- | --------------------- |
-| 🌗 Arquivo JSON com os botões               | 🟡 Em desenvolvimento |
 | 🌗 Modo claro/escuro                        | ⚪ Planejado          |
 | 🎨 Personalizador de cores ao vivo          | ⚪ Planejado           |
 | 💾 Download automático do código            | ⚪ Planejado           |
