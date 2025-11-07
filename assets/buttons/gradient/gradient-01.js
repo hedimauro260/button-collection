@@ -1,5 +1,7 @@
 export default {
     id: "btn-01",
+    category: "gradient",
+    message: "🎨 Degradê educado.",
     name: "Button 01",
     html: `<button class="btn-01">Button 01</button>`,
     css: `.btn-01 {

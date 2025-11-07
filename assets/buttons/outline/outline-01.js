@@ -1,5 +1,7 @@
 export default {
     id: "btn-04",
+    category: "classic",
+    message: "🖼️ Só contorno, zero miolo.",
     name: "Button 04",
     html: `<button class="btn-04">Button 04</button>`,
     css: `.btn-04 {

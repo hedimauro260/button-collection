@@ -1,5 +1,7 @@
 export default {
     id: "btn-03",
+    category: "press3d",
+    message: "🕳️ Afunda gostoso.",
     name: "Button 03",
     html: `<button class="btn-03">Button 03</button>`,
     css: `.btn-03 {
